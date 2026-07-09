@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Signal Terminal Pro</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/chart.css">
+    <link rel="stylesheet" href="css/indicators.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            Signal Terminal Pro
+
+        </div>
+
+        <div class="control">
+
+            <label>Market</label>
+
+            <select id="market">
+
+                <optgroup label="Forex">
+
+                    <option value="C:EURUSD">EUR/USD</option>
+                    <option value="C:GBPUSD">GBP/USD</option>
+                    <option value="C:USDJPY">USD/JPY</option>
+                    <option value="C:USDCHF">USD/CHF</option>
+                    <option value="C:AUDUSD">AUD/USD</option>
+                    <option value="C:USDCAD">USD/CAD</option>
+
+                </optgroup>
+
+                <optgroup label="Crypto">
+
+                    <option value="X:BTCUSD">BTC/USD</option>
+                    <option value="X:ETHUSD">ETH/USD</option>
+                    <option value="X:SOLUSD">SOL/USD</option>
+
+                </optgroup>
+
+            </select>
+
+        </div>
+
+        <div class="control">
+
+            <label>Timeframe</label>
+
+            <select id="timeframe">
+
+                <option value="1,minute">1 Minute</option>
+                <option value="5,minute">5 Minute</option>
+                <option value="15,minute">15 Minute</option>
+                <option value="30,minute">30 Minute</option>
+                <option value="1,hour">1 Hour</option>
+                <option value="4,hour">4 Hour</option>
+                <option value="1,day">1 Day</option>
+
+            </select>
+
+        </div>
+
+        <div class="control">
+
+            <label>Massive API Key</label>
+
+            <input
+                id="apiKey"
+                type="password"
+                placeholder="Enter API Key"
+            >
+
+        </div>
+
+        <button id="connectButton">
+
+            CONNECT
+
+        </button>
+
+        <button id="analyzeButton">
+
+            ANALYZE
+
+        </button>
+
+        <div id="status">
+
+            Waiting...
+
+        </div>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <section class="chart-section">
+
+            <canvas
+                id="chart"
+                width="1400"
+                height="600"
+            ></canvas>
+
+        </section>
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <h3>Signal</h3>
+
+                <div id="signal">
+
+                    --
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Confidence</h3>
+
+                <div id="confidence">
+
+                    --
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Trend</h3>
+
+                <div id="trend">
+
+                    --
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Momentum</h3>
+
+                <div id="momentum">
+
+                    --
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Volatility</h3>
+
+                <div id="volatility">
+
+                    --
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Market Status</h3>
+
+                <div id="marketStatus">
+
+                    --
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="indicator-table">
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>Indicator</th>
+                    <th>Value</th>
+                    <th>Signal</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="indicatorTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- JS -->
+
+<script type="module" src="js/app.js"></script>
+
+</body>
+</html>
